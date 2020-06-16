@@ -1,3 +1,4 @@
+// getting the user choice:
 const getUserChoice = userInput =>{
     userInput = userInput.toLowerCase();
     if (userInput === 'rock' || userInput==='paper' || userInput ==='scissors') {
@@ -6,7 +7,7 @@ const getUserChoice = userInput =>{
         console.log('not a valid choice');
     }
 };
-
+// Creating an random computer choice:
 function getComputerChoice() {
     switch(Math.floor(Math.random()*3)) {
         case 0:
@@ -20,7 +21,7 @@ function getComputerChoice() {
             break;
     };
 }
-
+// determining the winner between the choice:
 function determineWinner(userChoice,computerChoice) {
     if (userChoice === computerChoice) {
         return 'It\'s a tie!';
@@ -46,7 +47,7 @@ function determineWinner(userChoice,computerChoice) {
         return 'You win!';
     }
 };
-
+// Calling the playGame function:
 function playGame(choice) {
     var userChoice = getUserChoice(choice);
     var computerChoice = getComputerChoice()

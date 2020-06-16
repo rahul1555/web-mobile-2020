@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
 }
-
+/*adding color to the background*/
 body {
     background: linear-gradient(to bottom, #C4D9DA, #CFE8E9);
 }
 
+/* arranging the main image */
 
 .main {
     margin-top:20px;
@@ -21,10 +22,10 @@ body {
 .first {
     border-bottom: 2px solid black;
 }
-
 .last {
     margin-top: 10px;
 }
+/* using position to arrangre the lines*/
 
 .info {
     position: absolute;
