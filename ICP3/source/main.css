@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*adding color to the background*/
+body {
+    background: linear-gradient(to bottom, #C4D9DA, #CFE8E9);
+}
+
+/* arranging the main image */
+
+.main {
+    margin-top:20px;
+    background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover; */
+    height:400px;
+}
+
+.first {
+    border-bottom: 2px solid black;
+}
+.last {
+    margin-top: 10px;
+}
+/* using position to arrangre the lines*/
+
+.info {
+    position: absolute;
+    right: 25px;
+    bottom:0;
+}
+.profile-pic {
+    height: 100px;
+}
+
+/* @media (min-width: 768px){
+    .info {
+        position: absolute;
+        right: 25px;
+        bottom: 0;
+    }
+} */
+
+/* url('https://source.unsplash.com/twukN12EN7c/1920x1080') */
