@@ -1,0 +1,117 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+.header {
+    position:relative;
+    border-bottom: 1px solid black;
+    height: 100px;
+}
+.header img {
+    position: absolute;
+    left:10px;
+    height:100px;
+    bottom:0;
+}
+
+.header .header-sub h2 {
+    position: absolute;
+    right:10px;
+    bottom: 20px;
+}
+
+.header .header-sub p {
+    position: absolute;
+    right:10px;
+    bottom: 0px;
+    float: right;
+}
+
+.main-img{
+    width: 100%;
+}
+
+.img{
+    width: 100px;
+    height: 100px;
+}
+
+.social{
+    float: left;
+    margin-top: 10px;
+}
+
+.social.google{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.social.facebook{
+    margin-right: 15px;
+}
+
+.social.instagram{
+    margin-left: 15px;
+}
+
+@media only screen and (min-width: 768px){
+    .main-img{
+        width: 600px;
+        margin-left: 88px;
+
+    }
+    .img{
+        width: 180px;
+        height: 180px;
+    }
+
+    .social{
+        margin-top: 50px;
+    }
+
+    .social.google{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .social.facebook{
+        margin-right: 50px;
+    }
+
+    .social.instagram{
+        margin-left: 50px;
+    }
+
+}
+
+@media only screen and (min-width: 1000px){
+    .main-img{
+        width: 1200px;
+        margin-left: 170px;
+
+
+    }
+    .img{
+        width: 250px;
+        height: 250px;
+    }
+
+    .social{
+        margin-top: 80px;
+    }
+
+    .social.google{
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .social.facebook{
+        margin-right: 80px;
+    }
+
+    .social.instagram{
+        margin-left: 80px;
+    }
+
+}
