@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- linking the html with css and bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="task2.css">
+    <!-- calling the script-->
+
+    <script src="task2.js"></script>
+    <title>Github data</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- dividing the rows and columns -->
+        <div class="row">
+            <div class="col header">
+                <h1><span style="font-style: italic;">App to get Github Data</span></h1>
+            </div>
+        </div>
+        <div>
+            <form>
+                <!-- adding the ID to call for javascript -->
+                <label for="uname">username</label><br>
+                <input type="text" id="uname" name="uname"><br>
+                <button type="button" onclick="getData()">GetData</button>
+            </form>
+        </div>
+        <div class="row">
+            <div class=col-6 >
+                <div class="row table">
+                    <!-- taking the name by ID -->
+                    <p><span style="font-style:italic ;font-weight: bold">name of the user: </span> <span style="font-weight: bold" id=login>  </span></p>
+                </div>
+                <div class="row">
+                    <!-- taking the github id number by defined ID from JS -->
+                    <p><span style="font-style:italic ;font-weight: bold">ID of the user:  </span><span id=num style="font-weight: bold">  </span></p>
+                </div>
+                <div class="row">
+                    <!-- taking the link to github id by defined ID from JS  -->
+                    <p><span style="font-style:italic ;font-weight: bold">link to user account:  </span> <span id=url style="font-weight: bold">  </span></p>
+                </div>
+            </div> 
+            <div class=col-6>
+                <p><span style="font-style: italic;font-weight: bold">Image of the user:</span></p>
+                <img id=img src="">
+                
+            </div>                       
+        </div>
+    </div>
+</body>

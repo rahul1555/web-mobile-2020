@@ -1,0 +1,15 @@
+body{
+    margin: 2%;
+    border: 1px solid rgb(102, 32, 32);
+    background-color:gold;
+}
+
+.header{
+    border: 10px solid black;
+
+}
+
+
+table, th, td {
+    border: 1px solid black;
+  }
