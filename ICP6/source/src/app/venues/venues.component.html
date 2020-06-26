@@ -1,0 +1,39 @@
+<div class="venues">
+    <div class="header">
+        <h3>Venues</h3>
+        <p>Please enter any place name to get the nearest venues.</p>
+    </div>
+
+    <div class="venues-form">
+        <form>
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="city" [(ngModel)]="cityName" placeholder="Enter city or place" name="city">
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-success" (click)="getVenues()">Get Venues</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="venues-list" *ngIf="locationSearched">
+        <h3 class="text-center">Results</h3>
+        <p class="text-center">Showing results for : {{locationSearched}}</p>
+        <div class="venue-item" *ngFor="let venue of venuesList">
+            <div class="card item">
+                <!-- <img class="card-img-top" src="https://www.relishcateringco.com/wp-content/uploads/2017/11/Skylight.jpg" alt="Card image"> -->
+                <div class="card-body">
+                    <h4 class="card-title">{{venue.name}}</h4>
+                    <h6 class="category">Category: {{venue.category}}</h6>
+                    <!-- <p class="card-text"> -->
+                    <p class="address">
+                        {{venue.address.street}}{{venue.address.city}}
+                        <br/> {{venue.address.state}} ,{{venue.address.postalCode}} {{venue.address.country}}
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

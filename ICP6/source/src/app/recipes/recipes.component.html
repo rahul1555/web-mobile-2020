@@ -1,0 +1,65 @@
+<div class="recipes">
+    <div class="header">
+        <h3>Recipes</h3>
+        <p>Please enter any food item name to get the the recipe details and places it is available.</p>
+    </div>
+
+    <div class="recipe-form">
+        <form>
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="item" [(ngModel)]="itemName" placeholder="Enter an item" name="item">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="city" [(ngModel)]="cityName" placeholder="Enter city" name="city">
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-success" (click)="getRecipeDetails()">Get Recipe Info</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="results" *ngIf="recipesList.length > 0 && restaurants.length > 0">
+        <div class="row">
+            <div class="col recipe">
+                <h3 class="text-center">Recipe Details</h3>
+                <div class="venue-item" *ngFor="let recipe of recipesList">
+                    <div class="card item">
+                        <div class="card-body">
+                            <h4 class="card-title">{{recipe.name}}</h4>
+                            <ul class="list">
+                                <li class="list-item" *ngFor="let ingredient of recipe.ingredients">
+                                    {{ingredient}}
+                                </li>
+                            </ul>
+                            <!-- <p class="card-text"> -->
+                            <p class="address">
+                                <a href="{{recipe.url}}">Get Details</a>
+                            </p>
+                            
+                            <img class="recipe-img" [src]="recipe.icon" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col restaurant">
+                <h3 class="text-center">Restaurants </h3>
+                <div class="venue-item" *ngFor="let restaurant of restaurants">
+                    <div class="card item">
+                        <div class="card-body">
+                            <h4 class="card-title">{{restaurant.name}}</h4>
+                            <h6 class="category">Category: {{restaurant.category}}</h6>
+                            <!-- <p class="card-text"> -->
+                            <p class="address">
+                                {{restaurant.address.street}}{{restaurant.address.city}}
+                                <br/> {{restaurant.address.state}} ,{{restaurant.address.postalCode}} {{restaurant.address.country}}
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
